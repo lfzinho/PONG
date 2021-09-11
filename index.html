@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ping, o jogo de P⬤____NG</title>
+</head>
+<body>
+    <main>
+        <div class="menu">
+            <div class="item"><div class="emoji">😄</div> Jogar agora!!!</div>
+            <div class="item"><div class="emoji">😎</div>  X1 </div>
+            <div class="item"><div class="emoji">🤪</div> Modo nada a ver</div>
+            <div class="item"><div class="emoji">🤓</div> Jogar sozinho</div>
+        </div>
+        <div class="background">
+            <div class="glass_case" case="1"><div class="glass_shard" id="glass_1"></div></div>
+            <div class="glass_case" case="2"><div class="glass_shard" id="glass_2"></div></div>
+            <div class="glass_case" case="3"><div class="glass_shard" id="glass_3"></div></div>
+            <div class="glass_case" case="4"><div class="glass_shard" id="glass_4"></div></div>
+            <div class="glass_case" case="5"><div class="glass_shard" id="glass_5"></div></div>
+        </div>
+        <div class="title">
+            <h1 class="ping">PING</h1>
+            <h2>o jogo de</h2>
+            <h1 class="pong">PONG</h1>
+        </div>
+        <div class="bottom_extra">
+            <div class="item"><div class="emoji">⚙️</div> Configurações</div>
+        </div>
+    </main>
+    <footer>
+        <script>
+            i=1
+            a=1
+            function myMethod( )
+            {   
+                i+=1*a
+                if(i==1){document.title="Ping, o jogo de P⬤____NG",a=-a}
+                if(i==2){document.title="Ping, o jogo de P_⬤___NG"}
+                if(i==3){document.title="Ping, o jogo de P__⬤__NG"}
+                if(i==4){document.title="Ping, o jogo de P___⬤_NG"}
+                if(i==5){document.title="Ping, o jogo de P____⬤NG", a=-a}
+            }
+            setInterval(myMethod, 500);
+        
+            var animate = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
+        window.setTimeout(callback, 1000 / 60)
+    };
+var canvas = document.createElement("canvas");
+var width = 400;
+var height = 200;
+canvas.width = width;
+canvas.height = height;
+var context = canvas.getContext('2d');
+var player = new Player();
+var computer = new Computer(10);
+var computer2 = new Computer(180);
+var ball = new Ball(200, 50);
+
+var keysDown = {};
+
+var render = function () {
+    context.fillStyle = "#000";
+    context.fillRect(0, 0, width, height);
+    //player.render();
+    computer.render();
+    computer2.render();
+    ball.render();
+};
+
+var update = function () {
+    player.update();
+    computer.update(ball);
+    computer2.update(ball);
+    ball.update(computer2.paddle, computer.paddle);
+};
+
+var step = function () {
+    update();
+    render();
+    animate(step);
+};
+
+function Paddle(x, y, width, height) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.x_speed = 0;
+    this.y_speed = 0;
+}
+
+Paddle.prototype.render = function () {
+    context.fillStyle = "#FFF";
+    context.fillRect(this.x, this.y, this.width, this.height);
+};
+
+Paddle.prototype.move = function (x, y) {
+    this.x += x;
+    this.y += y;
+    this.x_speed = x;
+    this.y_speed = y;
+    if (this.x < 0) {
+        this.x = 0;
+        this.x_speed = 0;
+    } else if (this.x + this.width > 400) {
+        this.x = 400 - this.width;
+        this.x_speed = 0;
+    }
+};
+
+function Computer(y) {
+    this.paddle = new Paddle(175, y, 50, 10);
+}
+
+Computer.prototype.render = function () {
+    this.paddle.render();
+};
+
+Computer.prototype.update = function (ball) {
+    var x_pos = ball.x;
+    var diff = -((this.paddle.x + (this.paddle.width / 2)) - x_pos);
+    if (diff < 0 && diff < -4) {
+        diff = -5;
+    } else if (diff > 0 && diff > 4) {
+        diff = 5;
+    }
+    dist_y = Math.abs(this.paddle.y-ball.y)
+    if(dist_y>80){
+        diff = -(this.paddle.x-175)/100
+    }
+    this.paddle.move(diff, 0);
+    if (this.paddle.x < 0) {
+        this.paddle.x = 0;
+    } else if (this.paddle.x + this.paddle.width > 400) {
+        this.paddle.x = 400 - this.paddle.width;
+    }
+};
+
+function Player() {
+    this.paddle = new Paddle(175, 180, 50, 10);
+}
+
+Player.prototype.render = function () {
+    this.paddle.render();
+};
+
+Player.prototype.update = function () {
+    for (var key in keysDown) {
+        var value = Number(key);
+        if (value == 37) {
+            this.paddle.move(-4, 0);
+        } else if (value == 39) {
+            this.paddle.move(4, 0);
+        } else {
+            this.paddle.move(0, 0);
+        }
+    }
+};
+
+function Ball(x, y) {
+    this.x = x;
+    this.y = y;
+    this.x_speed = 0;
+    this.y_speed = 3;
+}
+
+Ball.prototype.addSpeed = function (x_speed){
+    this.x_speed = this.x_speed + x_speed;
+}
+
+Ball.prototype.render = function () {
+    context.beginPath();
+    context.arc(this.x, this.y, 5, 2 * Math.PI, false);
+    context.fillStyle = "#fff";
+    context.fill();
+};
+
+Ball.prototype.update = function (paddle1, paddle2) {
+    this.x += this.x_speed;
+    this.y += this.y_speed;
+    var top_x = this.x - 5;
+    var top_y = this.y - 5;
+    var bottom_x = this.x + 5;
+    var bottom_y = this.y + 5;
+
+    if (this.x - 5 < 0) {
+        this.x = 5;
+        this.x_speed = -this.x_speed;
+    } else if (this.x + 5 > 400) {
+        this.x = 395;
+        this.x_speed = -this.x_speed;
+    }
+
+    if (this.y < 0 || this.y > 200) {
+        this.x_speed = 0;
+        this.y_speed = 3;
+        this.x = 200;
+        this.y = 50;
+    }
+
+    if (top_y > 100) {
+        if (top_y < (paddle1.y + paddle1.height) && bottom_y > paddle1.y && top_x < (paddle1.x + paddle1.width) && bottom_x > paddle1.x) {
+            this.y_speed = -3;
+            this.x_speed += (paddle1.x_speed / 2);
+            this.y += this.y_speed;
+        }
+    } else {
+        if (top_y < (paddle2.y + paddle2.height) && bottom_y > paddle2.y && top_x < (paddle2.x + paddle2.width) && bottom_x > paddle2.x) {
+            this.y_speed = 3;
+            this.x_speed += (paddle2.x_speed / 2);
+            this.y += this.y_speed;
+        }
+    }
+};
+
+document.body.appendChild(canvas);
+animate(step);
+
+window.addEventListener("keydown", function (event) {
+    keysDown[event.keyCode] = true;
+});
+
+window.addEventListener("keyup", function (event) {
+    delete keysDown[event.keyCode];
+});
+function mousemovement(event) {
+    speed = (event.movementX/50);
+    if (speed!=0 && speed<3 && speed>-3){
+        // if(!(ball.x_speed+speed>2) && !(ball.x_speed+speed<-2)){
+        //     ball.addSpeed(speed);
+        //     console.log(ball.x_speed)
+        // }
+    }
+    ball.x+=speed
+}
+
+document.addEventListener('mousemove', mousemovement);
+        </script>
+    </footer>
+</body>
+</html>
