@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+*{
+  font-family: "Inconsolata", monospace;
+  text-align: center;
+}
+
+body{
+  background: #333333;
+  color: white;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    right: 5%;
+}
+
+@mixin transition-all {
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.menu-bt {
+  font-weight: bold;
+  font-size: large;
+  text-align: initial;
+  color: white;
+  text-decoration: none;
+
+  border-style: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: .3em;
+  width: 15em;
+  transform: skewX(-10deg);
+  cursor: pointer;
+  @include transition-all; 
+  
+  background-size: 300% 100%;
+  background-position: 100% 0%;
+  background-image: linear-gradient(to right, white, rgb(196, 255, 255), rgb(0, 89, 255),rgb(95, 0, 204));
+  
+  &:before { content: "⠀";}
+  
+  &:hover {
+    background-position: 0% 0%;
+    transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
+    color: rgb(27, 27, 27);
+    box-shadow: rgba(0, 153, 255, 0.5) -0.3em 0.3em .8em;
+    
+    
+    }
+}
+
+.exit-bt {
+    background-image: linear-gradient(to right, white, rgb(255, 196, 196), rgb(255, 0, 43),rgb(204, 0, 0));
+    
+    &:hover{
+        box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em .8em;
+    }
+}
