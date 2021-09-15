@@ -40,7 +40,6 @@ body{
   width: 15em;
   transform: skewX(-10deg);
   cursor: pointer;
-  @include transition-all; 
   
   background-size: 300% 100%;
   background-position: 100% 0%;
@@ -49,6 +48,7 @@ body{
   &:before { content: "⠀";}
   
   &:hover {
+   @include transition-all; 
     background-position: 0% 0%;
     transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
     color: rgb(27, 27, 27);
@@ -56,6 +56,7 @@ body{
     
     
     }
+    transition-duration: 400ms;
 }
 
 .exit-bt {

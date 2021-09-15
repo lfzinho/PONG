@@ -38,12 +38,12 @@ body {
   -webkit-transform: skewX(-10deg);
           transform: skewX(-10deg);
   cursor: pointer;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
   background-size: 300% 100%;
   background-position: 100% 0%;
   background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(#c4ffff), color-stop(#0059ff), to(#5f00cc));
   background-image: linear-gradient(to right, white, #c4ffff, #0059ff, #5f00cc);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
 }
 
 .menu-bt:before {
@@ -51,6 +51,8 @@ body {
 }
 
 .menu-bt:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   background-position: 0% 0%;
   -webkit-transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
           transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
