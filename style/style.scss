@@ -53,9 +53,13 @@ body{
     transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
     color: rgb(27, 27, 27);
     box-shadow: rgba(0, 153, 255, 0.5) -0.3em 0.3em .8em;
-    
-    
     }
+
+  &:active {
+    transition: 50ms;
+    transform: translate(0em, 0em) skew(-10deg, 0deg);
+    box-shadow: rgba(0, 153, 255, 0.5) 0em 0em 2em;
+  }
     transition-duration: 400ms;
 }
 
@@ -64,5 +68,8 @@ body{
     
     &:hover{
         box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em .8em;
+    }
+    &:active {
+      box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 2em;
     }
 }

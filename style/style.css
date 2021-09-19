@@ -61,6 +61,15 @@ body {
           box-shadow: rgba(0, 153, 255, 0.5) -0.3em 0.3em 0.8em;
 }
 
+.menu-bt:active {
+  -webkit-transition: 50ms;
+  transition: 50ms;
+  -webkit-transform: translate(0em, 0em) skew(-10deg, 0deg);
+          transform: translate(0em, 0em) skew(-10deg, 0deg);
+  -webkit-box-shadow: rgba(0, 153, 255, 0.5) 0em 0em 2em;
+          box-shadow: rgba(0, 153, 255, 0.5) 0em 0em 2em;
+}
+
 .exit-bt {
   background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(#ffc4c4), color-stop(#ff002b), to(#cc0000));
   background-image: linear-gradient(to right, white, #ffc4c4, #ff002b, #cc0000);
@@ -69,5 +78,10 @@ body {
 .exit-bt:hover {
   -webkit-box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 0.8em;
           box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 0.8em;
+}
+
+.exit-bt:active {
+  -webkit-box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 2em;
+          box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 2em;
 }
 /*# sourceMappingURL=style.css.map */
