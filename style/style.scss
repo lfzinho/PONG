@@ -1,12 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
+
+
+$cinzadefundo : #1f1f1f;
+
+$gradiente-vermelho: linear-gradient(to right, white, rgb(255, 196, 196), rgb(255, 0, 43),rgb(204, 0, 0));
+$box-shadow-vermelho: rgba(255, 0, 0, 0.5);
+$gradiente-azul-grande: linear-gradient(to right, white, rgb(196, 255, 255), rgb(0, 89, 255),rgb(95, 0, 204));
+$gradiente-azul: linear-gradient(to right, #0059ff, #5f00cc);
+$box-shadow-azul: rgba(0, 153, 255, 0.5);
+
+
+$translate-0: translate(0em, 0em) skew(-10deg, 0deg);
+$translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
+
+
+
+
 *{
   font-family: "Inconsolata", monospace;
   text-align: center;
 }
 
 body{
-  background: #1f1f1f;
+  background: $cinzadefundo;
   color: white;
 }
 
@@ -44,33 +61,162 @@ body{
   
   background-size: 300% 100%;
   background-position: 100% 0%;
-  background-image: linear-gradient(to right, white, rgb(196, 255, 255), rgb(0, 89, 255),rgb(95, 0, 204));
+  background-image: $gradiente-azul-grande;
   
   &:before { content: "⠀";}
   
   &:hover {
    @include transition-all; 
     background-position: 0% 0%;
-    transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
+    transform: $translate-03;
     color: rgb(27, 27, 27);
-    box-shadow: rgba(0, 153, 255, 0.5) -0.3em 0.3em .8em;
+    box-shadow: $box-shadow-azul -0.3em 0.3em .8em;
     }
 
   &:active {
     transition: 50ms;
-    transform: translate(0em, 0em) skew(-10deg, 0deg);
-    box-shadow: rgba(0, 153, 255, 0.5) 0em 0em 2em;
+    transform: $translate-0;
+    box-shadow: $box-shadow-azul 0em 0em 2em;
   }
     transition-duration: 400ms;
 }
 
 .exit-bt {
-    background-image: linear-gradient(to right, white, rgb(255, 196, 196), rgb(255, 0, 43),rgb(204, 0, 0));
+    background-image: $gradiente-vermelho;
     
     &:hover{
-        box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em .8em;
+        box-shadow: $box-shadow-vermelho -0.3em 0.3em .8em;
     }
     &:active {
-      box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 2em;
+      box-shadow: $box-shadow-vermelho 0em 0em 2em;
     }
+}
+
+.final__gradient-button-1{
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 50px;
+  height: 250px;
+  margin: .3em;
+  border-radius: 100px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: $cinzadefundo;
+  border: 10px solid transparent;
+  border-image: $gradiente-azul;
+  border-image-slice: 1;
+  color: white;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: skewX(-10deg);
+  transform: skewX(-10deg);
+  cursor: pointer;
+
+  &:hover{
+    background-size: 100%;
+    background-image: $gradiente-azul;
+    color: white;
+    border-radius: 10px;
+    -webkit-transform: $translate-03;
+            transform: $translate-03;
+    border-image-slice: 1;
+  }
+
+  &:active{
+    background-size: 100%;
+    background-image: $gradiente-azul;
+    color: white;
+    border-radius: 10px;
+    -webkit-transform: $translate-0;
+            transform: $translate-0;
+    border-image-slice: 1;
+  }
+
+  #modos{
+    position: absolute; 
+    top:25%; 
+    left: 10%; 
+    right:10%; 
+    bottom:30%;
+
+    img{
+      height: 100px;
+    }
+  }
+}
+
+
+#nav_superior{
+  padding: 10px;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+.back-bt{
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  border-style: none;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 0.3em;
+  width: 3em !important;
+  -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+  cursor: pointer;
+  background-size: 300% 100%;
+  background-position: 100% 0%;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(#ffc4c4), color-stop(#ff002b), to(#cc0000));
+  background-image: $gradiente-vermelho;
+  -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+  
+  &:hover {
+  -webkit-box-shadow: $box-shadow-vermelho -0.3em 0.3em 0.8em;
+          box-shadow: $box-shadow-vermelho -0.3em 0.3em 0.8em;
+          border-radius: 10px;
+  -webkit-transform: $translate-03;
+          transform: $translate-03;
+
+    background-position: 0% 0%;
+    color: rgb(27, 27, 27);
+  }
+
+  &:active {
+    -webkit-box-shadow: $box-shadow-vermelho 0em 0em 2em;
+            box-shadow: $box-shadow-vermelho 0em 0em 2em;
+            border-radius: 10px;
+    -webkit-transform: $translate-0;
+            transform: $translate-0;
+    
+    background-position: 0% 0%;
+    color: rgb(27, 27, 27);
+  }
+}
+
+#azul{
+  background-image: $gradiente-azul-grande;
+  
+  &:hover {
+  -webkit-box-shadow: $box-shadow-azul -0.3em 0.3em 0.8em;
+          box-shadow: $box-shadow-azul -0.3em 0.3em 0.8em;
+  }
+
+  &:active {
+    -webkit-box-shadow: $box-shadow-azul 0em 0em 2em;
+            box-shadow: $box-shadow-azul 0em 0em 2em;
+  }
 }
