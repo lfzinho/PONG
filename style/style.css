@@ -35,7 +35,7 @@ body {
   border-radius: 10px;
   padding: 10px;
   margin: .3em;
-  width: 15em !important;
+  width: 15em;
   -webkit-transform: skewX(-10deg);
           transform: skewX(-10deg);
   cursor: pointer;
@@ -71,18 +71,39 @@ body {
           box-shadow: rgba(0, 153, 255, 0.5) 0em 0em 2em;
 }
 
-.exit-bt {
+.red-bt {
   background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(#ffc4c4), color-stop(#ff002b), to(#cc0000));
   background-image: linear-gradient(to right, white, #ffc4c4, #ff002b, #cc0000);
+  width: 4em;
+  height: 3em;
 }
 
-.exit-bt:hover {
+.red-bt:before {
+  content: "";
+}
+
+.red-bt:hover {
   -webkit-box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 0.8em;
           box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 0.8em;
 }
 
-.exit-bt:active {
+.red-bt:hover .icon-bt {
+  -webkit-filter: brightness(11%);
+          filter: brightness(11%);
+}
+
+.red-bt:active {
   -webkit-box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 2em;
           box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 2em;
+}
+
+.icon-bt {
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=style.css.map */
