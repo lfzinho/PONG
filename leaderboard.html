@@ -9,7 +9,7 @@
     <title>P⬤NG</title>
 </head>
 
-<body>
+<body class="container-fluid">
     <header>
         <div class=row id="nav_superior">
             <div class="col-6"> 
@@ -22,12 +22,13 @@
             </div>
         </div>
     </header>
-    
-    <div  class="row justify-content-center" id="table-leaderboard">
-        <div class = "col-2"><a>ASDJASLDK</a></div>
-        <div class = "col-2"><a>ASDJASLDK</a></div>
-        <div class = "col-2"><a>ASDJASLDK</a></div>
-        <div class="container col-8">
+    <div style = "position: absolute; top: 20%; left: 15%;">
+        <div class="row">
+            <a class="tab-bt">Play Game</a>
+            <a class="tab-bt">Study Calculus</a>
+            <a class="tab-bt">Sell Drugs</a>
+        </div>
+        <div class="row justify-content-center" id="table-leaderboard">
             <div id = "div-tabela">
                 <table>
                     <thead class = "th fixed">
@@ -93,5 +94,14 @@
             </div>
         </div>
     </div>
+    <footer>
+        <script>
+            $(document).ready(function(){
+                $('.tab-bt').click(function(){
+                    $(this).toggleClass('tab-bt-active');
+                });
+            });
+        </script>
+    </footer>
  
 </body>

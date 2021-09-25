@@ -14,27 +14,23 @@ height: 75px;
     }
 }
 
-.container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
 
 #div-tabela {
 	display: block;
 	overflow-y: scroll;
 	overflow-x: hidden;
-    height: 500px;
-	border-radius: 10px;
+    height: 400px;
+	width: 70vw;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	padding: 0;
 }
 
 .th.fixed {
     top: 0;
     z-index: 2;
     position: sticky;
-    background-color: white;
+    background-color: black;
  }
 
 #table-leaderboard {
@@ -54,6 +50,12 @@ height: 75px;
 		background-color: rgba(255,255,255,0.2);
 		color: #fff;
 	}
+}
+
+#bt-tabela {
+	font-size: 10px;
+	margin-left: 2vh;
+	margin-right: 2vh;
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -83,9 +85,10 @@ height: 75px;
 
 thead {
 	background-image: $gradiente-azul;
-	th {
-		background-color: rgba($color: #4e4e4e, $alpha: 0.3);
-	}
+}
+
+thead > tr {
+	background-color: rgba(73, 73, 73, 0.4);
 }
 
 #modos{

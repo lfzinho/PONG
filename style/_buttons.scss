@@ -233,3 +233,31 @@ body{
             box-shadow: $box-shadow-azul 0em 0em 2em;
   }
 }
+
+.tab-bt{
+  @extend .menu-bt;
+  border-radius: 10px 10px 0px 0px;
+  
+  &:hover {
+   @include transition-all; 
+    background-position: 0% 0%;
+    transform: skew(-10deg, 0deg);
+    color: rgb(27, 27, 27);
+    box-shadow: $box-shadow-azul 0em -.2em .8em;
+    }
+
+  &:active {
+    transition: 50ms;
+    transform: translate(0em, .1em) skew(-10deg, 0deg);
+    box-shadow: $box-shadow-azul 0em -.5em .8em;
+  }
+    transition-duration: 400ms;
+}
+
+.tab-bt-active {
+  @extend .tab-bt;
+  
+  color: rgb(27, 27, 27);
+  background-image: linear-gradient(to right, white, rgb(196, 255, 255), #a1c2ff, #94e1ff);
+  
+}
