@@ -52,3 +52,42 @@ $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
     justify-content: center;
     align-items: center;
 }
+
+@mixin for-phone-only {
+	@media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+	@media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+	@media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+	@media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+	@media (min-width: 1800px) { @content; }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@mixin for-sm-up {
+	@media (min-width: 576px) { @content; }
+}
+@mixin for-sm-only {
+	@media (max-width: 576px) { @content; }
+}
+// Medium devices (tablets, 768px and up)
+@mixin for-md-up {
+	@media (min-width: 768px){@content; }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin for-lg-up {
+	@media (min-width: 992px){@content; }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin for-xl-up {
+	@media (min-width: 1200px){@content; }
+}
