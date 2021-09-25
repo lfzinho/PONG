@@ -122,6 +122,9 @@ body {
   border-radius: 10px;
   padding: 50px;
   height: 250px;
+  width: 250px;
+  max-width: 80vw;
+  max-height: 80vw;
   margin: .3em;
   border-radius: 100px;
   position: relative;
@@ -381,6 +384,10 @@ thead {
 
 thead th {
   background-color: rgba(78, 78, 78, 0.3);
+}
+
+#modos {
+  padding: 25px;
 }
 
 .body-center {
