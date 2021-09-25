@@ -41,6 +41,7 @@ body{
 }
 
 .menu-bt {
+  background-color: transparent;
   font-weight: bold;
   font-size: large;
   text-align: initial;
@@ -61,6 +62,7 @@ body{
   background-image: $gradiente-azul-grande;
   
   &:before { content: "⠀";}
+  &.text-center:before { content: "";}
   
   &:hover {
    @include transition-all; 
