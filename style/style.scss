@@ -11,6 +11,9 @@
 @mixin for-md-up {
 	@media (min-width: 768px){@content; }
 }
+@mixin for-md-only {
+	@media (min-width: 768px) and (max-width: 992px){@content; }
+}
 
 // Large devices (desktops, 992px and up)
 @mixin for-lg-up {

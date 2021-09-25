@@ -451,6 +451,14 @@ body {
   margin-bottom: 0;
 }
 
+@media (max-width: 576px) {
+  .tabs a {
+    font-size: 10px;
+    margin-left: 4.2px;
+    max-height: 28px;
+  }
+}
+
 .th.fixed {
   top: -2px;
   z-index: 2;
@@ -461,11 +469,11 @@ body {
 
 #table-leaderboard table {
   width: 100%;
+  margin-left: 1px;
   border-collapse: collapse;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 0px;
-  margin-left: 1px;
   table-layout: fixed;
 }
 
@@ -478,6 +486,7 @@ body {
 @media (max-width: 576px) {
   #table-leaderboard table {
     font-size: 10px;
+    margin-left: 0;
   }
 }
 
