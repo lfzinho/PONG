@@ -58,7 +58,7 @@ body{
   
   background-size: 300% 100%;
   background-position: 100% 0%;
-  background-image: linear-gradient(to right, white, rgb(196, 255, 255), rgb(0, 89, 255),rgb(95, 0, 204));
+  background-image: $gradiente-azul-grande;
   
   &:before { content: "⠀";}
   
@@ -67,37 +67,37 @@ body{
     background-position: 0% 0%;
     transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
     color: rgb(27, 27, 27);
-    box-shadow: rgba(0, 153, 255, 0.5) -0.3em 0.3em .8em;
+    box-shadow: $box-shadow-azul -0.3em 0.3em .8em;
     }
 
   &:active {
     transition: 50ms;
     transform: translate(0em, 0em) skew(-10deg, 0deg);
-    box-shadow: rgba(0, 153, 255, 0.5) 0em 0em 2em;
+    box-shadow: $box-shadow-azul 0em 0em 2em;
   }
     transition-duration: 400ms;
 }
 
 .red-bt {
-    background-image: linear-gradient(to right, white, rgb(255, 196, 196), rgb(255, 0, 43),rgb(204, 0, 0));
+    background-image: $gradiente-vermelho;
     width: 4em;
     height: 3em;
     &:before { content: "";}
 
     &:hover{
-        box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em .8em;
+        box-shadow: $box-shadow-vermelho -0.3em 0.3em .8em;
     }
     &:hover .icon-bt{
       filter: brightness(11%);
     }
     &:active {
-      box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 2em;
+      box-shadow: $box-shadow-vermelho -0.3em 0.3em 2em;
     }
 }
 
 .icon-bt{
-  height: 2em;
-  width: 2em;
+  height: 80%;
+  width: 80%;
 
   
   position:absolute;
