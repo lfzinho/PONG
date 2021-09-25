@@ -230,6 +230,36 @@ body {
   box-shadow: rgba(0, 153, 255, 0.5) 0em 0em 2em;
 }
 
+#table-profile {
+  font-size: 26px;
+  -webkit-transform: skew(-10deg, 0deg);
+          transform: skew(-10deg, 0deg);
+  border: 0.3em solid #0059ff;
+  border-radius: 10px;
+}
+
+#table-profile table {
+  width: 100%;
+}
+
+#table-profile tr td:first-of-type {
+  width: 8%;
+}
+
+#table-profile td {
+  background-color: rgba(95, 0, 204, 0.2);
+  border: 0.2em solid #1b1b1b;
+  text-align: initial;
+}
+
+#table-profile .material-icons {
+  font-size: 32px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(50%, 10%);
+          transform: translate(50%, 10%);
+}
+
 body {
   height: 100%;
   overflow-x: hidden;
@@ -279,7 +309,7 @@ body {
   background-color: white;
 }
 
-table {
+#table-leaderboard table {
   width: 100%;
   font-size: 30px;
   border-collapse: collapse;
@@ -290,8 +320,8 @@ table {
   table-layout: fixed;
 }
 
-th,
-td {
+#table-leaderboard th,
+#table-leaderboard td {
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;

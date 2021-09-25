@@ -1,0 +1,33 @@
+$blue: #0059ff;
+$purple: #5f00cc;
+$bg-color: rgb(27, 27, 27);
+
+#table-profile {
+    font-size: 26px;
+    transform: skew(-10deg, 0deg);
+    border: .3em solid $blue;
+    border-radius: 10px;
+
+    table{
+        width: 100%;
+    }
+
+    tr{
+    td:first-of-type{
+        width: 8%;
+    }
+    }
+
+    td{
+        background-color: rgba($purple, 0.2);
+        border: 0.2em solid $bg-color;
+        text-align: initial;
+    }
+
+    .material-icons {
+        font-size: 32px;
+        top: 50%;
+        left:50%;
+        transform: translate(50%, 10%);
+    }
+}
