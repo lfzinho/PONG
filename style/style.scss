@@ -37,7 +37,7 @@ $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
    
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background-image: linear-gradient(to top, #0059ff, #5f00cc); 
+	background-image: $gradiente-azul; 
 	border-bottom-right-radius: 10px;
 	border-top-right-radius: 10px;
 }
