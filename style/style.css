@@ -120,7 +120,6 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 10px;
-  padding: 50px;
   height: 250px;
   width: 250px;
   max-width: 80vw;
@@ -158,6 +157,7 @@ body {
   -webkit-transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
   transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
   border-image-slice: 1;
+  border: none;
 }
 
 .final__gradient-button-1:active {
@@ -361,7 +361,7 @@ body {
 
 #table-leaderboard table {
   width: 100%;
-  font-size: 30px;
+  font-size: 10px;
   border-collapse: collapse;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -377,6 +377,18 @@ body {
   color: #fff;
 }
 
+@media (min-width: 576px) {
+  #table-leaderboard table {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  #table-leaderboard table {
+    font-size: 30px;
+  }
+}
+
 thead {
   background-image: -webkit-gradient(linear, left top, right top, from(#0059ff), to(#5f00cc));
   background-image: linear-gradient(to right, #0059ff, #5f00cc);
@@ -388,6 +400,10 @@ thead th {
 
 #modos {
   padding: 25px;
+  height: 80vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .body-center {

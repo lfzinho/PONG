@@ -117,7 +117,6 @@ body{
   color: white;
   text-decoration: none;
   border-radius: 10px;
-  padding: 50px;
   height: 250px;
   width: 250px;
   max-width: 80vw;
@@ -151,6 +150,7 @@ body{
     -webkit-transform: $translate-03;
             transform: $translate-03;
     border-image-slice: 1;
+    border: none;
   }
 
   &:active{

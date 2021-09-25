@@ -40,7 +40,7 @@ height: 75px;
 #table-leaderboard {
 	table {
 		width: 100%;
-		font-size: 30px;
+		font-size: 10px;
 		border-collapse: collapse;
 		box-shadow: 0 0 20px rgba(0,0,0,0.1);
 		padding: 0px;
@@ -56,6 +56,30 @@ height: 75px;
 	}
 }
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+	#table-leaderboard table{
+		font-size: 15px;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+	#table-leaderboard table{
+		font-size: 30px;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+}
+
 
 thead {
 	background-image: $gradiente-azul;
@@ -66,4 +90,6 @@ thead {
 
 #modos{
 	padding: 25px;
+	height: 80vh;
+	align-items: center;
 }
