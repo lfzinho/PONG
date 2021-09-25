@@ -7,12 +7,33 @@ $gradiente-vermelho: linear-gradient(to right, white, rgb(255, 196, 196), rgb(25
 $box-shadow-vermelho: rgba(255, 0, 0, 0.5);
 $gradiente-azul-grande: linear-gradient(to right, white, rgb(196, 255, 255), rgb(0, 89, 255),rgb(95, 0, 204));
 $gradiente-azul: linear-gradient(to right, #0059ff, #5f00cc);
+$gradiente-azul-claro: linear-gradient(to right, white, rgb(196, 255, 255), #a1c2ff, #94e1ff);
 $box-shadow-azul: rgba(0, 153, 255, 0.5);
 
 
 $translate-0: translate(0em, 0em) skew(-10deg, 0deg);
 $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
 
+@mixin hover1() {
+  -webkit-box-shadow: $box-shadow-vermelho -0.3em 0.3em 0.8em;
+          box-shadow: $box-shadow-vermelho -0.3em 0.3em 0.8em;
+  -webkit-transform: $translate-03;
+          transform: $translate-03;
+}
+
+@mixin active1 {
+  -webkit-box-shadow: $box-shadow-vermelho 0em 0em 2em;
+          box-shadow: $box-shadow-vermelho 0em 0em 2em;
+  -webkit-transform: $translate-0;
+          transform: $translate-0;
+}
+
+@mixin transition-all {
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
 
 *{
   font-family: "Inconsolata", monospace;
@@ -33,13 +54,6 @@ body{
     right: 5%;
 }
 
-@mixin transition-all {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-	transition: all 200ms ease-in-out;
-}
-
 .menu-bt {
   background-color: transparent;
   font-weight: bold;
@@ -47,7 +61,6 @@ body{
   text-align: initial;
   color: white;
   text-decoration: none;
-
   display:inline-block;
   border-style: none;
   border-radius: 10px;
@@ -68,14 +81,14 @@ body{
   &:hover {
    @include transition-all; 
     background-position: 0% 0%;
-    transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
+    transform: $translate-03;
     color: rgb(27, 27, 27);
     box-shadow: $box-shadow-azul -0.3em 0.3em .8em;
     }
 
   &:active {
     transition: 50ms;
-    transform: translate(0em, 0em) skew(-10deg, 0deg);
+    transform: $translate-0;
     box-shadow: $box-shadow-azul 0em 0em 2em;
   }
     transition-duration: 400ms;
@@ -99,13 +112,11 @@ body{
 }
 
 .icon-bt{
-  height: 80%;
-  width: 80%;
-
-  
   position:absolute;
   top: 50%;
   left:50%;
+  height: 80%;
+  width: 80%;
   transform: translate(-50%, -50%);
 }
 
@@ -192,29 +203,21 @@ body{
   cursor: pointer;
   background-size: 300% 100%;
   background-position: 100% 0%;
-  background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(#ffc4c4), color-stop(#ff002b), to(#cc0000));
   background-image: $gradiente-vermelho;
   -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease;
   
   &:hover {
-  -webkit-box-shadow: $box-shadow-vermelho -0.3em 0.3em 0.8em;
-          box-shadow: $box-shadow-vermelho -0.3em 0.3em 0.8em;
-          border-radius: 10px;
-  -webkit-transform: $translate-03;
-          transform: $translate-03;
+    @include hover1;
+    border-radius: 10px;
 
     background-position: 0% 0%;
     color: rgb(27, 27, 27);
   }
 
   &:active {
-    -webkit-box-shadow: $box-shadow-vermelho 0em 0em 2em;
-            box-shadow: $box-shadow-vermelho 0em 0em 2em;
-            border-radius: 10px;
-    -webkit-transform: $translate-0;
-            transform: $translate-0;
-    
+    @include active1;
+    border-radius: 10px;   
     background-position: 0% 0%;
     color: rgb(27, 27, 27);
   }
@@ -224,13 +227,11 @@ body{
   background-image: $gradiente-azul-grande;
   
   &:hover {
-  -webkit-box-shadow: $box-shadow-azul -0.3em 0.3em 0.8em;
-          box-shadow: $box-shadow-azul -0.3em 0.3em 0.8em;
+    @include hover1()
   }
 
   &:active {
-    -webkit-box-shadow: $box-shadow-azul 0em 0em 2em;
-            box-shadow: $box-shadow-azul 0em 0em 2em;
+    @include active1()
   }
 }
 
@@ -258,6 +259,6 @@ body{
   @extend .tab-bt;
   
   color: rgb(27, 27, 27);
-  background-image: linear-gradient(to right, white, rgb(196, 255, 255), #a1c2ff, #94e1ff);
+  background-image: $gradiente-azul-claro;
   
 }
