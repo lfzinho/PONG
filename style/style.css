@@ -25,6 +25,7 @@ body {
 }
 
 .menu-bt {
+  background-color: transparent;
   font-weight: bold;
   font-size: large;
   text-align: initial;
@@ -49,6 +50,10 @@ body {
 
 .menu-bt:before {
   content: "⠀";
+}
+
+.menu-bt.text-center:before {
+  content: "";
 }
 
 .menu-bt:hover {
@@ -258,6 +263,62 @@ body {
   left: 50%;
   -webkit-transform: translate(50%, 10%);
           transform: translate(50%, 10%);
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  vertical-align: middle;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.signin {
+  margin-top: 20px;
+  max-width: 300px;
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  place-content: center;
+}
+
+.signin input {
+  text-align: left;
+  margin: 2px;
+}
+
+.signin .checkbox label {
+  cursor: pointer;
+}
+
+.signin .checkbox label input {
+  inline-size: 20px;
+  cursor: pointer;
+}
+
+.user-picture {
+  height: 200px;
+  width: 100%;
+  font-size: 150px;
+}
+
+#back {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 body {
