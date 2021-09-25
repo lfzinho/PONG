@@ -1,11 +1,15 @@
 $blue: #0059ff;
 $purple: #5f00cc;
 $bg-color: rgb(27, 27, 27);
+$gradiente-azul: linear-gradient(to right, #0059ff, #5f00cc);
 
 #table-profile {
     font-size: 26px;
     transform: skew(-10deg, 0deg);
-    border: .3em solid $blue;
+    border: 10px solid transparent;
+    border-image: $gradiente-azul;
+    border-image-slice: 1;
+    outline: none;
     border-radius: 10px;
 
     table{
@@ -13,21 +17,21 @@ $bg-color: rgb(27, 27, 27);
     }
 
     tr{
+        height: 2em;
     td:first-of-type{
         width: 8%;
+        text-align: center;
     }
     }
 
     td{
-        background-color: rgba($purple, 0.2);
+        background-color: rgba($purple, 0.1);
         border: 0.2em solid $bg-color;
         text-align: initial;
     }
 
     .material-icons {
         font-size: 32px;
-        top: 50%;
-        left:50%;
-        transform: translate(50%, 10%);
+        vertical-align: middle;
     }
 }

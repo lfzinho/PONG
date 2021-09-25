@@ -14,10 +14,15 @@ $box-shadow-azul: rgba(0, 153, 255, 0.5);
 
 $translate-0: translate(0em, 0em) skew(-10deg, 0deg);
 $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
-body{
-    height: 100%;
-	overflow-x: hidden;
+
+.body-center{
+	display: flex;
+    height: 100vh;
+    justify-content: center;
+    vertical-align: middle;
+    flex-direction: column;
 }
+
 
 #modos{
     position: absolute;

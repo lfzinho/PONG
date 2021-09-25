@@ -239,7 +239,12 @@ body {
   font-size: 26px;
   -webkit-transform: skew(-10deg, 0deg);
           transform: skew(-10deg, 0deg);
-  border: 0.3em solid #0059ff;
+  border: 10px solid transparent;
+  -o-border-image: linear-gradient(to right, #0059ff, #5f00cc);
+     border-image: -webkit-gradient(linear, left top, right top, from(#0059ff), to(#5f00cc));
+     border-image: linear-gradient(to right, #0059ff, #5f00cc);
+  border-image-slice: 1;
+  outline: none;
   border-radius: 10px;
 }
 
@@ -247,37 +252,24 @@ body {
   width: 100%;
 }
 
+#table-profile tr {
+  height: 2em;
+}
+
 #table-profile tr td:first-of-type {
   width: 8%;
+  text-align: center;
 }
 
 #table-profile td {
-  background-color: rgba(95, 0, 204, 0.2);
+  background-color: rgba(95, 0, 204, 0.1);
   border: 0.2em solid #1b1b1b;
   text-align: initial;
 }
 
 #table-profile .material-icons {
   font-size: 32px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(50%, 10%);
-          transform: translate(50%, 10%);
-}
-
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   vertical-align: middle;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .signin {
@@ -321,9 +313,19 @@ body {
       align-self: flex-end;
 }
 
-body {
-  height: 100%;
-  overflow-x: hidden;
+.body-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  vertical-align: middle;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #modos {
