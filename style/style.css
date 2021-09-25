@@ -234,6 +234,8 @@ body {
   box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 0.8em;
   -webkit-transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
   transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
+  -webkit-box-shadow: rgba(0, 153, 255, 0.5) -0.3em 0.3em 0.8em;
+  box-shadow: rgba(0, 153, 255, 0.5) -0.3em 0.3em 0.8em;
 }
 
 #azul:active {
@@ -241,6 +243,8 @@ body {
   box-shadow: rgba(255, 0, 0, 0.5) 0em 0em 2em;
   -webkit-transform: translate(0em, 0em) skew(-10deg, 0deg);
   transform: translate(0em, 0em) skew(-10deg, 0deg);
+  -webkit-box-shadow: rgba(0, 153, 255, 0.5) -0.3em 0.3em 0.8em;
+  box-shadow: rgba(0, 153, 255, 0.5) -0.3em 0.3em 0.8em;
 }
 
 .tab-bt, .tab-bt-active {
