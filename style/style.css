@@ -37,6 +37,7 @@ body {
   padding: 10px;
   margin: .3em;
   width: 15em;
+  max-width: 70vw;
   -webkit-transform: skewX(-10deg);
           transform: skewX(-10deg);
   cursor: pointer;
@@ -319,19 +320,9 @@ body {
 #back {
   -ms-flex-item-align: end;
       align-self: flex-end;
-}
-
-body {
-  height: 100%;
-  overflow-x: hidden;
-}
-
-#modos {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  width: 50px;
+  height: 50px;
+  text-align: center;
 }
 
 #nav_superior {
@@ -342,7 +333,10 @@ body {
 }
 
 #nav_superior #corner-logo {
-  height: 100%;
+  height: 80px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding-right: 20px;
 }
 
@@ -395,6 +389,11 @@ thead {
 
 thead th {
   background-color: rgba(78, 78, 78, 0.3);
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
 }
 
 /* width */
