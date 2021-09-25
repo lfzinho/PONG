@@ -6,7 +6,7 @@
         "_buttons.scss",
         "_titles-n-tables.scss",
         "_login.scss",
-        "_leaderboards_2.scss"
+        "_leaderboards.scss"
     ],
     "names": [],
     "file": "style.css"
