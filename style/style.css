@@ -308,7 +308,17 @@ body {
   vertical-align: middle;
 }
 
-.signin {
+.login_screen #nav_superior {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.login_screen .signin {
   margin-top: 20px;
   max-width: 300px;
   vertical-align: middle;
@@ -324,32 +334,24 @@ body {
   place-content: center;
 }
 
-.signin input {
+.login_screen .signin input {
   text-align: left;
   margin: 2px;
 }
 
-.signin .checkbox label {
+.login_screen .signin .checkbox label {
   cursor: pointer;
 }
 
-.signin .checkbox label input {
+.login_screen .signin .checkbox label input {
   inline-size: 20px;
   cursor: pointer;
 }
 
-.user-picture {
+.login_screen .user-picture {
   height: 200px;
   width: 100%;
   font-size: 150px;
-}
-
-#back {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  width: 50px;
-  height: 50px;
-  text-align: center;
 }
 
 #nav_superior {
@@ -373,13 +375,23 @@ body {
   overflow-x: hidden;
   height: 400px;
   width: 70vw;
-  border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   padding: 0;
 }
 
+.tabs {
+  max-width: 70vw;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.tabs a {
+  max-width: 30%;
+  margin-bottom: 0;
+}
+
 .th.fixed {
-  top: 0;
+  top: -2px;
   z-index: 2;
   position: -webkit-sticky;
   position: sticky;
@@ -393,7 +405,7 @@ body {
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 0px;
-  margin: 1px !important;
+  margin-left: 1px;
   table-layout: fixed;
 }
 
@@ -478,5 +490,17 @@ thead > tr {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #5f00cc;
+}
+
+.menu-item-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */

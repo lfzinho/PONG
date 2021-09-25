@@ -15,19 +15,26 @@ height: 75px;
 }
 
 
+
 #div-tabela {
 	display: block;
 	overflow-y: scroll;
 	overflow-x: hidden;
     height: 400px;
 	width: 70vw;
-	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 	padding: 0;
 }
-
+.tabs{
+	max-width: 70vw;
+	flex-wrap: nowrap;
+	a{
+		max-width: 30%;
+		margin-bottom: 0;
+	}
+}
 .th.fixed {
-    top: 0;
+    top: -2px;
     z-index: 2;
     position: sticky;
     background-color: black;
@@ -40,7 +47,7 @@ height: 75px;
 		border-collapse: collapse;
 		box-shadow: 0 0 20px rgba(0,0,0,0.1);
 		padding: 0px;
-		margin: 1px !important;
+		margin-left: 1px;
 		table-layout: fixed;
 	}
 

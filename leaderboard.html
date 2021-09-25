@@ -23,8 +23,8 @@
         </div>
     </header>
     <div style = "position: absolute; top: 20%; left: 15%;">
-        <div class="row">
-            <a class="tab-bt">Play Game</a>
+        <div class="row tabs">
+            <a class="tab-bt tab-bt-active">Play Game</a>
             <a class="tab-bt">Study Calculus</a>
             <a class="tab-bt">Sell Drugs</a>
         </div>
@@ -96,11 +96,27 @@
     </div>
     <footer>
         <script>
-            $(document).ready(function(){
-                $('.tab-bt').click(function(){
-                    $(this).toggleClass('tab-bt-active');
+            // $(document).ready(function(){
+            //     $('.tab-bt').click(function(){
+            //         $(this).toggleClass('tab-bt-active');
+            //     });
+            // });
+            document.addEventListener("DOMContentLoaded", function(event) {
+                tabs = Array.from(document.getElementsByClassName("tab-bt"))
+                tabs.forEach(function(tab){
+                    tab.addEventListener("click",function(){
+                        deactiveAll()
+                        this.classList.toggle("tab-bt-active")
+                    });
                 });
+                function deactiveAll(){
+                    tabs = Array.from(document.getElementsByClassName("tab-bt"))
+                    tabs.forEach(function(tab){
+                        tab.classList.remove("tab-bt-active")
+                    });
+                }
             });
+            
         </script>
     </footer>
  

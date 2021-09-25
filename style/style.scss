@@ -46,3 +46,9 @@ $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
 ::-webkit-scrollbar-thumb:hover {
 	background: #5f00cc; 
 }
+
+.menu-item-list{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
