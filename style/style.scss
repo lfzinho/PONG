@@ -10,6 +10,9 @@
 @mixin for-md-up {
 	@media (min-width: 768px){@content; }
 }
+@mixin for-md-down {
+	@media (max-width: 768px){@content; }
+}
 @mixin for-md-only {
 	@media (min-width: 768px) and (max-width: 992px){@content; }
 }
@@ -66,6 +69,11 @@ $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
     align-items: center;
 }
 
+.explicacao>div{
+	@include for-md-down{
+		margin-bottom: 20px;
+	}
+}
 
 // Mudança da barra de rolamento do site como um todo
 ::-webkit-scrollbar {
