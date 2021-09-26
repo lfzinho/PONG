@@ -37,6 +37,19 @@ $box-shadow-azul: rgba(0, 153, 255, 0.5);
 $translate-0: translate(0em, 0em) skew(-10deg, 0deg);
 $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
 
+// Definição de fonte e alinhamento de todos os elementos das páginas
+*{
+	font-family: "Inconsolata", monospace;
+	text-align: center;
+  }
+  
+  // Definições de cor das páginas
+  body{
+	background: $cinzadefundo;
+	color: white;
+  }
+
+// Css de configuração do body do menu e do login
 .body-center{
 	display: flex;
     height: 100vh;
@@ -44,6 +57,15 @@ $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
     vertical-align: middle;
     flex-direction: column;
 }
+
+
+// Css de configuração dos botões do menu, como um todo.
+.menu-item-list{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 // Mudança da barra de rolamento do site como um todo
 ::-webkit-scrollbar {
@@ -66,13 +88,6 @@ $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
 	background: #5f00cc; 
 }
 
-
-// Css de configuração do menu, como um todo, da página principal
-.menu-item-list{
-	display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 // Importação dos outros arquivos scss
 @import "buttons";

@@ -1,7 +1,7 @@
-// importação de fonte
+// Importação de fonte
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
-//criação de variaveis de cor e gradiente
+// Criação de variaveis de cor e gradiente
 $cinzadefundo : #1f1f1f;
 
 $gradiente-vermelho: linear-gradient(to right, white, rgb(255, 196, 196), rgb(255, 0, 43),rgb(204, 0, 0));
@@ -11,7 +11,7 @@ $gradiente-azul: linear-gradient(to right, #0059ff, #5f00cc);
 $gradiente-azul-claro: linear-gradient(to right, white, rgb(196, 255, 255), #a1c2ff, #94e1ff);
 $box-shadow-azul: rgba(0, 153, 255, 0.5);
 
-// criação de variáveis para fins de animação
+// Criação de variáveis para fins de animação
 $translate-0: translate(0em, 0em) skew(-10deg, 0deg);
 $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
 
@@ -23,7 +23,6 @@ $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
           transform: $translate-03;
 }
 
-// Sombras e movimentação dos botões azuis
 @mixin active1 {
   -webkit-box-shadow: $box-shadow-vermelho 0em 0em 2em;
           box-shadow: $box-shadow-vermelho 0em 0em 2em;
@@ -31,7 +30,8 @@ $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
           transform: $translate-0;
 }
 
-// transições
+
+// Transições
 @mixin transition-all {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
@@ -39,28 +39,9 @@ $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
 	transition: all 200ms ease-in-out;
 }
 
-// definição de fonte e alinhamento de todos os elementos das páginas
-*{
-  font-family: "Inconsolata", monospace;
-  text-align: center;
-}
 
-// definições da página de menu
-body{
-  background: $cinzadefundo;
-  color: white;
-}
-
-.menu{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 50%;
-    top: 15%;
-    right: 5%;
-}
-
-// estilo dos botões do menu(azul)
+// Estilo dos botões do menu(azul)
+// Reaproveitado para o botão de back no topo esquerdo das páginas
 .menu-bt {
   background-color: transparent;
   font-weight: bold;
@@ -101,7 +82,7 @@ body{
     transition-duration: 400ms;
 }
 
-// botões do menu vermelhos
+// Alterações que sobrepoem algumas configs do menu-bt para botões vermelhos
 .red-bt {
     background-image: $gradiente-vermelho;
     width: 4em;
@@ -119,7 +100,8 @@ body{
     }
 }
 
-// classe que centraliza os icones no centro do botão
+// Classe que centraliza os ícones no centro do botão
+// No momento apenas em uso nos botões de retorno
 .icon-bt{
   position:absolute;
   top: 50%;
@@ -129,7 +111,8 @@ body{
   transform: translate(-50%, -50%);
 }
 
-// estilo dos botões com gradiente apenas na borda (utilizado nos modos)
+// Estilo dos botões com gradiente apenas na borda
+// Utilizado na página "modos.html", por exemplo
 .final__gradient-button-1{
   text-align: center;
   font-weight: bold;
@@ -194,8 +177,9 @@ body{
   
 }
 
-// botão vermelho de voltar
-.back-bt{
+// Botão de info em "modos_explicacao.html"
+// Reaproveitado de um modelo antigo
+.info-bt{
   font-weight: bold;
   font-size: large;
   text-align: center;
@@ -232,7 +216,7 @@ body{
   }
 }
 
-// versão azul do botão de voltar (utilizada no botão de dúvidas)
+// Versão azul do botão de voltar (utilizada no botão de dúvidas)
 #azul{
   background-image: $gradiente-azul-grande;
   
@@ -249,7 +233,7 @@ body{
   }
 }
 
-// botão "aba" da tabela de leaderboard
+// Botão "aba" da tabela de leaderboard
 .tab-bt{
   @extend .menu-bt;
   border-radius: 10px 10px 0px 0px;
