@@ -1,5 +1,4 @@
-
-// Small devices (landscape phones, 576px and up)
+// Mudança na responsividade de dispositivos pequenos(tela de 576px+)
 @mixin for-sm-up {
 	@media (min-width: 576px) { @content; }
 }
@@ -7,7 +6,7 @@
 	@media (max-width: 576px) { @content; }
 }
 
-// Medium devices (tablets, 768px and up)
+// Mudança na responsividade de dispositivos médios(tela de 768px+)
 @mixin for-md-up {
 	@media (min-width: 768px){@content; }
 }
@@ -15,18 +14,17 @@
 	@media (min-width: 768px) and (max-width: 992px){@content; }
 }
 
-// Large devices (desktops, 992px and up)
+// Mudança na responsividade de dispositivos grandes(tela de 992px+)
 @mixin for-lg-up {
 	@media (min-width: 992px){@content; }
 }
 
-// Extra large devices (large desktops, 1200px and up)
+// Mudança na responsividade de dispositivos bem grendes(tela de 1200px+)
 @mixin for-xl-up {
 	@media (min-width: 1200px){@content; }
 }
 
-
-
+// Definição de variáveis de cor
 $cinzadefundo : #1f1f1f;
 
 $gradiente-vermelho: linear-gradient(to right, white, rgb(255, 196, 196), rgb(255, 0, 43),rgb(204, 0, 0));
@@ -47,36 +45,35 @@ $translate-03: translate(0.3em, -0.3em) skew(-10deg, 0deg);
     flex-direction: column;
 }
 
-/* width */
+// Mudança da barra de rolamento do site como um todo
 ::-webkit-scrollbar {
 	width: 20px;
 }
   
-/* Track */
 ::-webkit-scrollbar-track {
 	box-shadow: inset 0 0 5px grey; 
 	border-bottom-right-radius: 10px;
 	border-top-right-radius: 10px;
 }
    
-/* Handle */
 ::-webkit-scrollbar-thumb {
-	background-image: $gradiente-azul; 
+	background-image: linear-gradient(to top, #0059ff, #5f00cc);; 
 	border-bottom-right-radius: 10px;
 	border-top-right-radius: 10px;
 }
   
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: #5f00cc; 
 }
 
+// Css de configuração do menu, como um todo, da página principal
 .menu-item-list{
 	display: flex;
     justify-content: center;
     align-items: center;
 }
 
+// Importação dos outros arquivos scss
 @import "buttons";
 @import "titles-n-tables";
 @import "login";
