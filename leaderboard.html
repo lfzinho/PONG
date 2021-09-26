@@ -10,6 +10,8 @@
 </head>
 
 <body class="container-fluid">
+
+    <!--Barra de navegação para o voltar a página anterior + miniatura da logo-->
     <header>
         <div class=row id="nav_superior">
             <div class="col-6"> 
@@ -22,6 +24,9 @@
             </div>
         </div>
     </header>
+
+    <!--Tabela de Rankings-->
+    <!--Futuramente a pessoa poderá escolher entre os rankings dos diferentes modos de jogo-->
     <div style = "position: absolute; top: 20%; left: 5vw;">
         <div class="row tabs">
             <a class="tab-bt tab-bt-active">Clássico</a>
@@ -42,67 +47,64 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Cell 1</td>
-                            <td>Cell 2</td>
-                            <td>Cell 3</td>
+                            <td>野獣</td>
+                            <td>1</td>
+                            <td>999999999</td>
                         </tr>
                         <tr>
-                            <td>Cell 1</td>
-                            <td>Cell 2</td>
-                            <td>Cell 3</td>
+                            <td>Lfzin</td>
+                            <td>2</td>
+                            <td>3607521</td>
                         </tr>
                         <tr>
-                            <td>Cell 1</td>
-                            <td>Cell 2</td>
-                            <td>Cell 3</td>
+                            <td>Ʈřʊȼʘ</td>
+                            <td>3</td>
+                            <td>3429154</td>
                         </tr>
                         <tr>
-                            <td>Cell 1</td>
-                            <td>Cell 2</td>
-                            <td>Cell 3</td>
+                            <td>Sanches</td>
+                            <td>4</td>
+                            <td>3184505</td>
                         </tr>
                         <tr>
-                            <td>Cell 1</td>
-                            <td>Cell 2</td>
-                            <td>Cell 3</td>
+                            <td>EsquiloTorto</td>
+                            <td>5</td>
+                            <td>3089204</td>
                         </tr>
                         <tr>
-                            <td>Cell 1</td>
-                            <td>Cell 2</td>
-                            <td>Cell 3</td>
+                            <td>xXxTheLegendxXx</td>
+                            <td>6</td>
+                            <td>2898106</td>
                         </tr>
                         <tr>
-                            <td>Cell 1</td>
-                            <td>Cell 2</td>
-                            <td>Cell 3</td>
+                            <td>Tio Rafa</td>
+                            <td>7</td>
+                            <td>2765824</td>
                         </tr>
                         <tr>
-                            <td>Cell 1</td>
-                            <td>Cell 2</td>
-                            <td>Cell 3</td>
+                            <td>King Kong</td>
+                            <td>8</td>
+                            <td>2651208</td>
                         </tr>
                         <tr>
-                            <td>Cell 1</td>
-                            <td>Cell 2</td>
-                            <td>Cell 3</td>
+                            <td>Bob</td>
+                            <td>9</td>
+                            <td>2485207</td>
                         </tr>
                         <tr>
-                            <td>Cell 10</td>
-                            <td>Cell 20</td>
-                            <td>Cell 30</td>
+                            <td>Just an ordinary gamer</td>
+                            <td>10</td>
+                            <td>2300000</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
+    <!--Script para que a aba de modo selecionada fique iluminada e aparente-->
     <footer>
         <script>
-            // $(document).ready(function(){
-            //     $('.tab-bt').click(function(){
-            //         $(this).toggleClass('tab-bt-active');
-            //     });
-            // });
             document.addEventListener("DOMContentLoaded", function(event) {
                 tabs = Array.from(document.getElementsByClassName("tab-bt"))
                 tabs.forEach(function(tab){
