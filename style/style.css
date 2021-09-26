@@ -389,6 +389,11 @@ body {
   vertical-align: middle;
 }
 
+#rank-image {
+  width: 250px;
+  height: 250px;
+}
+
 .login_screen #nav_superior {
   position: absolute;
   top: 0;
