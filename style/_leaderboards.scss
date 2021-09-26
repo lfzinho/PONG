@@ -1,9 +1,11 @@
+// estilos do barra de navegação superior
 #nav_superior{
 padding: 10px;
 position: relative;
 padding-bottom: 0px;
 height: 75px;
 
+	// posicioca a logo no canto da barra
     #corner-logo{
         height: 80px;
 		width: fit-content;
@@ -11,7 +13,7 @@ height: 75px;
     }
 }
 
-
+// estiliza a divisão onde a tabela está situada, permitindo o scroll
 #div-tabela {
 	display: block;
 	overflow-y: scroll;
@@ -21,6 +23,8 @@ height: 75px;
 	border-bottom-left-radius: 20px;
 	padding: 0;
 }
+
+// estilo e posicionamento dos botões tabs
 .tabs{
 	max-width: 70vw;
 	flex-wrap: nowrap;
@@ -37,6 +41,8 @@ height: 75px;
 		}	
 	}
 }
+
+// estilo do cabeçalho da tabela de leaderboard (fixa ela)
 .th.fixed {
     top: -2px;
     z-index: 2;
@@ -44,6 +50,8 @@ height: 75px;
     background-color: black;
  }
 
+
+ // estilo da tabela para diferentes tamanhos de tela, melhora na responsividade
 #table-leaderboard {
 	table {
 		width: 100%;
@@ -85,6 +93,7 @@ thead {
 thead > tr {
 	background-color: rgba(73, 73, 73, 0.4);
 }
+
 
 #modos{
 	padding: 25px;

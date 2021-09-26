@@ -3,6 +3,7 @@ $purple: #5f00cc;
 $bg-color: rgb(27, 27, 27);
 $gradiente-azul: linear-gradient(to right, #0059ff, #5f00cc);
 
+// estilo da tabela das informações do úsuario para diferentes tamanhos de tela
 #table-profile {
     font-size: 26px;
     transform: skew(-10deg, 0deg);
@@ -46,6 +47,7 @@ $gradiente-azul: linear-gradient(to right, #0059ff, #5f00cc);
     }
 }
 
+// tamanho da imagem de rank
 #rank-image {
     width: 250px;
     height: 250px;
