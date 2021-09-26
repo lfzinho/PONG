@@ -1,5 +1,15 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
+* {
+  font-family: "Inconsolata", monospace;
+  text-align: center;
+}
+
+body {
+  background: #1f1f1f;
+  color: white;
+}
+
 .body-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,32 +25,6 @@
           flex-direction: column;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 5px grey;
-          box-shadow: inset 0 0 5px grey;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background-image: -webkit-gradient(linear, left top, right top, from(#0059ff), to(#5f00cc));
-  background-image: linear-gradient(to right, #0059ff, #5f00cc);
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #5f00cc;
-}
-
 .menu-item-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,28 +37,26 @@
           align-items: center;
 }
 
-* {
-  font-family: "Inconsolata", monospace;
-  text-align: center;
+::-webkit-scrollbar {
+  width: 20px;
 }
 
-body {
-  background: #1f1f1f;
-  color: white;
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  left: 50%;
-  top: 15%;
-  right: 5%;
+::-webkit-scrollbar-thumb {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#0059ff), to(#5f00cc));
+  background-image: linear-gradient(to top, #0059ff, #5f00cc);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5f00cc;
 }
 
 .menu-bt, .tab-bt, .tab-bt-active {
@@ -234,7 +216,7 @@ body {
           transform: translate(-50%, -50%);
 }
 
-.back-bt {
+.info-bt {
   font-weight: bold;
   font-size: large;
   text-align: center;
@@ -257,7 +239,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.back-bt:hover {
+.info-bt:hover {
   -webkit-box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 0.8em;
   box-shadow: rgba(255, 0, 0, 0.5) -0.3em 0.3em 0.8em;
   -webkit-transform: translate(0.3em, -0.3em) skew(-10deg, 0deg);
@@ -267,7 +249,7 @@ body {
   color: #1b1b1b;
 }
 
-.back-bt:active {
+.info-bt:active {
   -webkit-box-shadow: rgba(255, 0, 0, 0.5) 0em 0em 2em;
   box-shadow: rgba(255, 0, 0, 0.5) 0em 0em 2em;
   -webkit-transform: translate(0em, 0em) skew(-10deg, 0deg);
@@ -332,6 +314,9 @@ body {
   background-image: linear-gradient(to right, white, #c4ffff, #a1c2ff, #94e1ff);
 }
 
+/*Estilo da tabela das informações do úsuario para diferentes tamanhos de tela
++
+responsividade por tamanho de tela*/
 #table-profile {
   font-size: 26px;
   -webkit-transform: skew(-10deg, 0deg);
@@ -394,6 +379,7 @@ body {
   height: 250px;
 }
 
+/*Estilo e posicionamento dos elementos da página de login*/
 .login_screen #nav_superior {
   position: absolute;
   top: 0;
@@ -440,6 +426,7 @@ body {
   font-size: 150px;
 }
 
+/*Estilos da barra de navegação superior*/
 #nav_superior {
   padding: 10px;
   position: relative;
@@ -455,6 +442,7 @@ body {
   padding-right: 20px;
 }
 
+/*Estiliza a divisão onde a tabela está situada, permitindo o scroll*/
 #div-tabela {
   display: block;
   overflow-y: scroll;
@@ -465,6 +453,7 @@ body {
   padding: 0;
 }
 
+/*Estilo e posicionamento dos botões tabs*/
 .tabs {
   max-width: 70vw;
   -ms-flex-wrap: nowrap;
@@ -485,6 +474,7 @@ body {
   }
 }
 
+/*Estilo do cabeçalho da tabela de leaderboard (fixa ela)*/
 .th.fixed {
   top: -2px;
   z-index: 2;
@@ -493,6 +483,7 @@ body {
   background-color: black;
 }
 
+/*Estilo da tabela para diferentes tamanhos de tela, melhora na responsividade*/
 #table-leaderboard table {
   width: 100%;
   margin-left: 1px;
@@ -503,6 +494,7 @@ body {
   table-layout: fixed;
 }
 
+/*Ajustes na responsividade da tabela de ranking*/
 @media (min-width: 576px) {
   #table-leaderboard table {
     font-size: 15px;
@@ -535,6 +527,7 @@ body {
   margin-right: 2vh;
 }
 
+/*Mudança de cor do cabeçalho da tabela*/
 thead {
   background-image: -webkit-gradient(linear, left top, right top, from(#0059ff), to(#5f00cc));
   background-image: linear-gradient(to right, #0059ff, #5f00cc);
@@ -544,6 +537,7 @@ thead > tr {
   background-color: rgba(73, 73, 73, 0.4);
 }
 
+/*Centralização dos botões em meio a página em "modos.html"*/
 #modos {
   padding: 25px;
   height: 80vh;
