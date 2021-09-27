@@ -37,6 +37,12 @@ body {
           align-items: center;
 }
 
+@media (max-width: 768px) {
+  .explicacao > div {
+    margin-bottom: 20px;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 20px;
 }
@@ -314,9 +320,6 @@ body {
   background-image: linear-gradient(to right, white, #c4ffff, #a1c2ff, #94e1ff);
 }
 
-/*Estilo da tabela das informações do úsuario para diferentes tamanhos de tela
-+
-responsividade por tamanho de tela*/
 #table-profile {
   font-size: 26px;
   -webkit-transform: skew(-10deg, 0deg);
@@ -379,7 +382,6 @@ responsividade por tamanho de tela*/
   height: 250px;
 }
 
-/*Estilo e posicionamento dos elementos da página de login*/
 .login_screen #nav_superior {
   position: absolute;
   top: 0;
@@ -426,7 +428,6 @@ responsividade por tamanho de tela*/
   font-size: 150px;
 }
 
-/*Estilos da barra de navegação superior*/
 #nav_superior {
   padding: 10px;
   position: relative;
@@ -442,7 +443,6 @@ responsividade por tamanho de tela*/
   padding-right: 20px;
 }
 
-/*Estiliza a divisão onde a tabela está situada, permitindo o scroll*/
 #div-tabela {
   display: block;
   overflow-y: scroll;
@@ -453,7 +453,6 @@ responsividade por tamanho de tela*/
   padding: 0;
 }
 
-/*Estilo e posicionamento dos botões tabs*/
 .tabs {
   max-width: 70vw;
   -ms-flex-wrap: nowrap;
@@ -474,7 +473,6 @@ responsividade por tamanho de tela*/
   }
 }
 
-/*Estilo do cabeçalho da tabela de leaderboard (fixa ela)*/
 .th.fixed {
   top: -2px;
   z-index: 2;
@@ -483,7 +481,6 @@ responsividade por tamanho de tela*/
   background-color: black;
 }
 
-/*Estilo da tabela para diferentes tamanhos de tela, melhora na responsividade*/
 #table-leaderboard table {
   width: 100%;
   margin-left: 1px;
@@ -494,7 +491,6 @@ responsividade por tamanho de tela*/
   table-layout: fixed;
 }
 
-/*Ajustes na responsividade da tabela de ranking*/
 @media (min-width: 576px) {
   #table-leaderboard table {
     font-size: 15px;
@@ -527,7 +523,6 @@ responsividade por tamanho de tela*/
   margin-right: 2vh;
 }
 
-/*Mudança de cor do cabeçalho da tabela*/
 thead {
   background-image: -webkit-gradient(linear, left top, right top, from(#0059ff), to(#5f00cc));
   background-image: linear-gradient(to right, #0059ff, #5f00cc);
@@ -537,7 +532,6 @@ thead > tr {
   background-color: rgba(73, 73, 73, 0.4);
 }
 
-/*Centralização dos botões em meio a página em "modos.html"*/
 #modos {
   padding: 25px;
   height: 80vh;
